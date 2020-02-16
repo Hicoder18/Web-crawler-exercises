@@ -1,5 +1,7 @@
 ## Python 网络爬虫练习
 
+Python网络爬虫练习，主要技术路线：Requests + bs4 。练习包含两个库（Requests + bs4）常用用法，re语法，4个定向爬虫实例，Scrapy简单入门。
+
 ### 环境
 
 * Windows 10
