@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nofollow">
+    <meta name="keyword" content="豆瓣热门图书,好书推荐,热门图书">
+    <meta name="decription" content="好书推荐网致力于为广大读者朋友们推荐值得阅读的经典、有价值的图书">
+    <title>好书推荐网</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <style>
+        #app {
+            padding-top: 25px;            
+        }
+        .bgc {
+            background-color: #ecf0f3 !important;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .card-img-top {
+            height: 225px;;
+        }
+        #footer {
+            padding: 30px 0 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!--导航栏-->
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">关于</h4>
+            <p class="text-muted">读一本好书，乐在其中。非常高兴为大家挑选好书！</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">联系我们</h4>
+            <ul class="list-unstyled">
+                <li><a href="#" class="text-white">微博</a></li>
+                <li><a href="#" class="text-white">微信公众号</a></li>
+                <li><a href="#" class="text-white">邮箱</a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg t="1581941498395" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2053" width="30" height="30"><path d="M204.8 851.84c-12.16 0-23.68-3.2-34.56-9.6-19.84-12.16-31.36-33.28-31.36-56.32V311.04c0-24.96 14.08-48 36.48-58.88l31.36-16c85.12-43.52 186.88-43.52 272.64-0.64l51.84 26.24c16 7.68 22.4 26.88 14.08 42.88-7.68 16-26.88 22.4-42.88 14.08l-51.84-26.24c-67.2-33.92-147.84-33.28-215.04 0.64l-31.36 16c-0.64 0.64-1.28 1.28-1.28 1.92v474.24c0 0.64 0 1.28 1.28 1.92 1.28 0.64 1.92 0 2.56 0 65.92-33.28 141.44-41.6 213.12-23.04 17.28 4.48 27.52 21.76 23.04 39.04-4.48 17.28-21.76 27.52-39.04 23.04-56.32-14.72-116.48-8.32-168.32 17.92-10.24 5.12-20.48 7.68-30.72 7.68z" fill="#ffffff" p-id="2054"></path><path d="M515.84 872.96c-5.76 0-11.52-1.92-16.64-4.48-9.6-5.76-15.36-16-15.36-27.52V411.52c0-17.92 14.08-32 32-32s32 14.08 32 32v378.24l5.76-2.56c85.76-42.88 187.52-42.24 272.64 0.64 0.64 0 1.28 0.64 2.56 0s1.28-1.28 1.28-1.92V311.04c0-0.64-0.64-1.92-1.28-1.92l-31.36-16c-67.2-33.92-147.84-34.56-215.04-0.64l-51.84 26.24c-16 7.68-35.2 1.28-42.88-14.08-7.68-16-1.28-35.2 14.08-42.88l51.84-26.24c85.76-42.88 187.52-42.24 272.64 0.64l31.36 16c22.4 11.52 36.48 33.92 36.48 58.88v474.24c0 23.04-11.52 44.16-31.36 56.32-19.84 12.16-44.16 13.44-64.64 2.56-67.2-33.92-147.84-34.56-215.04-0.64l-51.84 26.24c-5.76 2.56-10.88 3.2-15.36 3.2z" fill="#ffffff" p-id="2055"></path></svg>
+            <strong>好书推荐网</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+    </div>
+
+    <!--主体-->
+    <div class="bgc">
+        <div id="app" class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div v-for = "book in list.slice(0,25)" class="card" style="width: 18rem;">
+                        <img :src="book[0]" alt="封面图" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">《 {{ book[1] }} 》</h5>
+                            <p class="card-text">{{ book[3] }}</p>
+                            <p class="card-text">豆瓣评分：{{ book[4] }}</p> 
+                            <a :href="book[2]" target="_blank">详情>>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div v-for = "book in list.slice(25,50)" class="card" style="width: 18rem;">
+                        <img :src="book[0]" alt="封面图" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"> {{ book[1] }} </h5>
+                            <p class="card-text">{{ book[3] }}</p>
+                            <p class="card-text">豆瓣评分：{{ book[4] }}</p> 
+                            <a :href="book[2]" target="_blank">详情>>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div v-for = "book in list.slice(50,75)" class="card" style="width: 18rem;">
+                        <img :src="book[0]" alt="封面图" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"> {{ book[1] }} </h5>
+                            <p class="card-text">{{ book[3] }}</p>
+                            <p class="card-text">豆瓣评分：{{ book[4] }}</p> 
+                            <a :href="book[2]" target="_blank" nofollow>详情>>></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--底部-->
+    <div id="footer" class="container">
+        <p class="float-right">
+        <a href="#">Back to top</a>
+        </p>
+        <p>“好书推荐网” 属于 © 立码网络科技工作室所有</p>
+        <p>更多好应用尽在 <a href="#">立码编程</a> 或者 <a href="#">随心而码</a>。</p>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                list: [],
+                page: {
+                    number: 0,
+                    size: 10
+                }
+            },
+            mounted: function() {
+                this.getCustomers()
+            },
+            methods: {
+                getCustomers: function() {
+                    var url = 'http://q5u5tmfa2.bkt.clouddn.com/api/books/topbook250.json';
+                    this.$http.get(url).then(function(res){
+                        if(!res.ok){
+                            alert('请求出错！');
+                        }
+                        console.log(res.body.code);
+                        this.list = res.body.booklist
+                    });
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -24,3 +24,12 @@ Python网络爬虫练习，主要技术路线：Requests + bs4 。练习包含�
 
 学习笔记位于`Notes`文件夹。
 
+### Python+Vue.js+七牛云打造图书推荐网页
+
+* Requests + bs4 爬取豆瓣图书top250信息保存到 json
+
+* 将 json上传到七牛云对象存储空间
+
+* Vue.js + Vue-resource 开发前端页面
+
+`/Douban_Reading_List`
