@@ -7,8 +7,8 @@ import qiniu_access
 
 def upload():
     # 七牛的配置信息
-    access_key = '7ahEZ3FtZE9AmNLHUPcG59KmJtzOfulkLI71unHH'  # 输入你自己的
-    secret_key = 'zcx3MGQ22bfSWl2AYYIaxnutgy4WvNFn20ixNsPY'  # 输入你自己的
+    access_key = 'xxx'  # 输入你自己的
+    secret_key = 'xxx'  # 输入你自己的
 
     q = Auth(access_key, secret_key)
 
